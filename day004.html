@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            /* *{
+                padding: 0;
+                margin: 0;
+            } */
+            /* 一列布局 */
+            /* .container{
+                width: 1000px;
+                height: 100vh;
+                background-color: aquamarine;
+                margin: 0 auto;
+            } */
+
+            /* 两列布局 */
+            /* .container{
+                width: 1000px;
+                height: 100vh;
+                margin: 0 auto;
+            } 
+
+            .div1{
+                width: 300px;
+                height: 100vh;
+                float: left;
+                background-color: aquamarine;
+            }
+
+
+            .div2{
+                width: 700px;
+                height: 100vh;
+                float: left;
+                background-color: bisque;
+            } */
+
+
+            /* 三列布局 */
+            /* .container{
+                width: 1200px;
+                height: 100vh;
+                margin: 0 auto;
+            } 
+
+            .div1{
+                width: 300px;
+                height: 100vh;
+                float: left;
+                background-color: aquamarine;
+            }
+
+
+            .div2{
+                width: 700px;
+                height: 100vh;
+                float: left;
+                background-color: bisque;
+            }
+
+            .div3{
+                width: 200px;
+                height: 100vh;
+                float: left;
+                background-color:brown;
+            } */
+
+            /* 自适应两列 */
+            /* .div1 {
+                width: 300px;
+                height: 100vh;
+                background-color: #aadddd;
+                float: left;
+            }
+
+            .div2 {
+                height: 100vh;
+                margin-left: 300px;
+                background-color: #f08844;
+            } */
+
+            /* 自适应3列 */
+            /* .left {
+                width: 300px;
+                height: 100vh;
+                background-color: #aadddd;
+                float: left;
+            }
+
+            .mid {
+                margin-left:300px;
+                margin-right:300px;
+                height: 100vh;
+                background-color: #aa11dd;
+            }
+
+            .right{
+                width: 300px;
+                height: 100vh;
+                background-color: #f08844;
+                float: right;
+            } */
+            
+            /* 动画 */
+
+            /* .container{
+                width: 300px;
+                height: 300px;
+                margin: 100px auto;
+                background-color: aqua;
+                transition: 1s height;
+            } */
+
+            /* .container:hover{ */
+
+                /* transform: rotate(45deg); */
+
+                /* transform: scale(1.2); */
+
+                /* width: 500px;
+                height: 500px; */
+                /* transform: translateY(30px); */
+            /* } */
+
+            /* 心 */
+
+            /* body{
+                background-color:  black;
+            }
+
+            .container{
+                width: 400px;
+                height: 500px;
+                position: relative;
+                margin: 100px auto;
+                animation: heartbeat 0.5s linear infinite alternate;
+            }
+
+            .child{
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                border-radius: 50%;
+            }
+
+            .left{
+                left: 40px;
+            }
+
+            .right{
+                right:40px;
+            }
+
+            .bottom{
+                position: absolute;
+                width: 180px;
+                height: 180px;
+                top:84px;
+                left:110px;
+                background-color: red;
+                transform: rotate(45deg);
+            }
+
+            @keyframes heartbeat {
+                from{}
+                to{
+                    transform: scale(1.2);
+                }
+            } */
+
+            .container{
+                width: 400px;
+                height: 500px;
+                border: 1px solid black;
+                margin: 100px auto;
+            }
+
+            .container:hover{
+                animation: loop 3.5s  1 backwards;
+            }
+
+            @keyframes loop {
+
+
+                0%{
+                    background-color: aqua;
+                }
+
+                50%{
+                    background-color: red;
+                }
+
+                100%{background-color: blanchedalmond;}
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <!-- 一列布局 -->
+        <!-- <div class="container">
+
+            <div class="main"></div>
+        </div> -->
+
+        <!-- 两列布局,三列布局 -->
+
+        <!-- <div class="container">
+
+            <div class="div1"></div>
+
+            <div class="div2"></div>
+
+            <div class="div3"></div>
+        </div> -->
+
+        <!-- 自适应2列 -->
+        <!-- <div class="container"> -->
+            <!-- <div class="div1"></div>
+            <div class="div2"> 123 </div> -->
+        <!-- </div> -->
+
+        <!-- 自适应3列 -->
+        <!-- <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="mid">mid</div> -->
+
+        
+        <!-- 动画 -->
+        <!-- <div class="container"></div> -->
+
+
+        <div class="container">
+
+            <!-- <div class="child left"></div>
+            <div class="child right"></div>
+            <div class="bottom"></div> -->
+        </div>
+        
+
+    </body>
+
+</html>

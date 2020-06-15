@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        .xianshi {
+            margin: 200px auto;
+            width: 400px;
+            height: 225px;
+            overflow: hidden;
+        }
+
+        .zong {
+            width: 2000px;
+            animation: switch 10s ease-out infinite ;
+        }
+
+        .zong>img {
+            width: 400px;
+            height: 225px;
+            float: left;
+        }
+
+        @keyframes switch {
+
+            0%,
+            20% {
+                margin-left: 0;
+            }
+
+            20%,
+            40% {
+                margin-left: -400px;
+            }
+
+            40%,
+            60% {
+                margin-left: -800px;
+            }
+
+            60%,
+            80%{
+                margin-left: -1200px;
+            }
+
+            80%,
+            100%{
+                margin-left: -1600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="xianshi">
+        <div class="zong">
+            <img src="1.jpg" alt="1">
+            <img src="2.jpg" alt="2">
+            <img src="3.jpg" alt="3">
+            <img src="4.jpg" alt="4">
+            <img src="1.jpg" alt="5">
+        </div>
+    </div>
+</body>
+
+</html>

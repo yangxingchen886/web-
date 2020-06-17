@@ -1,0 +1,259 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+
+      <meta charset="UTF-8" />
+
+      <title>百度一下，你就知道</title>
+      <style>
+          /* 初始化 */
+          * {
+              margin: 0;
+              padding: 0;
+          }
+
+
+          .nav {
+              height: 60px;
+              width: 100%;
+          }
+
+          /* 左边 */
+          .nav-header-left {
+              float: left;
+          }
+
+
+          .nav-header-li {
+              float: left;
+              list-style: none;
+              margin-left: 32px;
+              color: #222;
+              font: 13px Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+              line-height: 60px;
+          }
+
+          .nav-header-li>a {
+              text-decoration: none;
+              color: #222;
+          }
+
+          .nav-header-li>a:hover {
+              color: #3388ff
+          }
+
+          /* 右边 */
+          .nav-header-right {
+              float: right;
+              margin-right: 32px;
+          }
+
+          .nav-setting-container {
+
+              display: none;
+              position: absolute;
+              left: 0;
+              height: auto;
+              width: 80px;
+              top: 50px;
+              left: -50px;
+              text-align: center;
+              box-shadow: 1px 1px 5px #888888;
+              border-radius: 5px;
+              z-index: 20;
+          }
+
+          .nav-setting-li {
+              list-style: none;
+              height: 36px;
+              line-height: 36px;
+          }
+
+          .nav-setting-li>a {
+              text-decoration: none;
+              color: #222;
+          }
+
+          .nav-setting-li>a:hover {
+              color: #3388ff
+          }
+
+          .zhuti {
+              width: 1250px;
+              margin: auto;
+              height: 314px;
+              text-align: center;
+          }
+
+          .logo {
+              width: 270px;
+              height: 129px;
+          }
+
+          .search {
+              width: 100%;
+              height: 100px;
+              text-align: center;
+          }
+
+          input {
+              text-rendering: auto;
+              letter-spacing: normal;
+              word-spacing: normal;
+              text-transform: none;
+              text-indent: 0px;
+              text-shadow: none;
+              display: inline-block;
+              text-align: start;
+              font: 400 13.3333px Arial;
+          }
+
+          .inputkuang {
+              width: 512px;
+              padding-right: 78px;
+              height: 16px;
+              padding: 12px 16px;
+              font-size: 16px;
+              margin: 0;
+              vertical-align: top;
+              outline: 0;
+              box-shadow: none;
+              border-radius: 10px 0 0 10px;
+              border: 2px solid #c4c7ce;
+              background: #ffffff;
+              color: #222;
+              overflow: hidden;
+          }
+
+          .submit {
+              font-family: "PingFang SC", Arial, "Microsoft YaHei", sans-serif;
+              text-align: center;
+              align-items: flex-start;
+              box-sizing: border-box;
+              margin: 0;
+              cursor: pointer;
+              width: 108px;
+              height: 44px;
+              line-height: 45px;
+              padding: 0;
+              background: 0 0;
+              background-color: #4e6ef2;
+              border-radius: 0 10px 10px 0;
+              font-size: 17px;
+              color: #fff;
+              box-shadow: none;
+              font-weight: 400;
+              border: none;
+              outline: 0;
+              position: relative;
+              left: -8px;
+          }
+
+          .footer {
+              width: 100%;
+              min-width: 1250px;
+              position: fixed;
+              z-index: 302;
+              bottom: 0;
+              left: 0;
+              height: 40px;
+              overflow: hidden;
+              zoom: 1;
+              margin: 0;
+              background-color: #fafafa;
+              text-align: left;
+              line-height: 40px;
+          }
+
+          .left {
+              float: left;
+          }
+
+          .left .lh:first-child {
+              margin-left: 30px;
+          }
+
+          .right{
+              float: right;
+              color: #bbb;
+              font-size: 12px;
+              font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+
+          }
+          .lh {
+              display: inline;
+              margin-right: 20px;
+          }
+          a{
+              font-size: 12px;
+              text-decoration: none;
+              color: #9195a3;
+              font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+          }
+      </style>
+  </head>
+
+  <body>
+      <div class="nav">
+
+          <ul class="nav-header-left">
+              <li class="nav-header-li"> <a href="#">新闻</a> </li>
+              <li class="nav-header-li"> <a href="#">hao123</a></li>
+              <li class="nav-header-li"> <a href="#">地图</a></li>
+              <li class="nav-header-li"> <a href="#">视频</a></li>
+              <li class="nav-header-li"> <a href="#">贴吧</a></li>
+              <li class="nav-header-li"> <a href="#">学术</a></li>
+          </ul>
+
+
+          <!-- 右边 -->
+          <ul class="nav-header-right">
+              <li class="nav-header-li"> <a href="#" style="color:red">抗击肺炎</a> </li>
+
+
+              <li class="nav-header-li" style="position: relative;">
+                  <a href="#" class="nav-show-setting">设置</a>
+
+                  <div class="nav-setting-container">
+
+                      <ul>
+
+                          <li class="nav-setting-li"> <a href="#">个人中心</a> </li>
+                          <li class="nav-setting-li"> <a href="#">消息</a> </li>
+                          <li class="nav-setting-li"><a href="#">账号切换</a></li>
+                      </ul>
+                  </div>
+              </li>
+
+          </ul>
+      </div>
+      <div class="zhuti">
+          <img class="logo" src="./baiduimg.png" alt="logo">
+          <div class="search">
+              <input class="inputkuang" type="text">
+              <input class="submit" type="submit" value="百度一下">
+          </div>
+      </div>
+
+      <div class="footer">
+          <div class="left">
+              <p class="lh"><a class="footer-left" href="#">设为首页</a></p>
+              <p class="lh"><a class="footer-left" href="#">关于百度</a></p>
+              <p class="lh"><a class="footer-left" href="#">About Baidu</a></p>
+              <p class="lh"><a class="footer-left" href="#">百度营销</a></p>
+              <p class="lh"><a class="footer-left" href="#">使用百度前必读</a></p>
+              <p class="lh"><a class="footer-left" href="#">意见反馈</a></p>
+              <p class="lh"><a class="footer-left" href="#">帮助中心</a></p>
+          </div>
+          <div class="right">
+              <span class="lh">©2020 Baidu </span>
+              <span class="lh">(京)-经营性-2017-0020 </span>
+              <span class="lh">京公网安备11000002000001号</span>
+              <span class="lh">京ICP证030173号</span>
+          </div>
+      </div>
+
+  </body>
+
+  </html>

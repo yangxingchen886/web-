@@ -171,6 +171,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: #f6f8fa;
+    justify-content: space-between;
 }
 
 .main-left {

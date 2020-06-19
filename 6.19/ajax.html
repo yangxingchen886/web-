@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<div class="main">
+    <form id="denglu" action="" method="POST">
+        <p>用户名：<input id="username" type="text" name="username"></p>
+        <p>密码：<input type="password" name="password" id="password"></p>
+        <p><input id="sub" name="sub" type="button" value="登陆"></p>
+    </form>
+</div>
+
+<style>
+    .content {
+        width: 100px;
+        height: 20px;
+    }
+
+    .red {
+
+        background-color: red;
+
+    }
+</style>
+
+<script src="../jquery-3.5.1.min.js"></script>
+
+<script>
+    /* ajax */
+    // function ajax() {
+    //     var pattern = /^[a-zA-Z0-9_-]{4,16}$/,
+    //         str = $('#username');
+    //     var pattern1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).{6,}$/,
+    //         pwd = $('password')
+    //     console.log(pattern.test(str.val()));
+    //     console.log(pattern1.test(pwd.val()));
+
+    $('#sub').click(function () {
+        var pattern = /^[a-zA-Z0-9_-]{4,16}$/,
+            str = $('#username');
+        var pattern1 = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/,
+            pwd = $('input[name="password"]')
+        console.log(pattern.test(str.val()));
+        console.log(pattern1.test(pwd.val()));
+
+        if (pattern.test(str.val()) == false && pattern1.test(pwd.val()) == false) {
+            alert('用户名密码输入错误');
+            return;
+        }
+
+        else if (pattern.test(str.val()) == false) {
+            alert('姓名至少4到16位，字母，数字，下划线，减号');
+            return;
+        }
+
+        else if  (pattern1.test(pwd.val()) == false) {
+            alert('密码至少至少6位，至少1个大写字母，1个小写字母，1个数字，1个特殊符号');
+            return;
+        }
+
+
+        $.ajax({
+            type: "POST",
+            // async : true, 
+            url: 'http://192.168.10.73:10001/banyuan/form/action',
+            data: {
+                username: $('#username').val(),
+                password: pwd.val()
+            },
+            success: function (result) {
+
+                console.log(result);
+                alert(result.message);
+            },
+            error: function (error) {
+
+                alert('失败');
+            }
+        });
+    })
+    // }
+</script>
+
+</html>
